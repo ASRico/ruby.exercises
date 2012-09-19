@@ -1,7 +1,8 @@
+#require "jcode"
 class Exercise4
     def initialize(texto,letras)
-        @texto = texto.downcase
-        @letras = letras.downcase
+        @texto = texto.upcase
+        @letras = letras.upcase
         @contadores = {}
         @letras.each_char{|clave| @contadores[clave]=0}
     end
@@ -13,7 +14,9 @@ class Exercise4
             end
         end
     end
-
+    def getContadores
+        return @contadores
+    end
     def show
         @contadores.each {|key, value| puts "#{key} = #{value}" }
     end

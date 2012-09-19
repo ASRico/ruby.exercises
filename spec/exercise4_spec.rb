@@ -1,12 +1,14 @@
-require "exercise1"
-describe Exercise1 do
-	context "intercambiar" do
-		it "intercambiar dos valores" do
-			aux = Exercise1.new(3,4)
-			aux.swap()
-			aux.getA() == 4
-			aux.getB() == 3
-
+require "exercise4"
+describe Exercise4 do
+	context "Contar letras" do
+		it "Cuenta la cantidad de letras que te interese buscar" do
+			aux = Exercise4.new("Hola maniana", "a")
+			aux.cuentaLetras
+			aux.getContadores[0] == 5
+			aux2 = Exercise4.new("Una maniana fria y lluviosa", "ai")
+			aux2.cuentaLetras
+			aux.getContadores[0] == 6
+			aux.getContadores[1] == 3
 		end
 	end
 end
