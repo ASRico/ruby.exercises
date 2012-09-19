@@ -5,12 +5,10 @@ describe Exercise2 do
 			aux = Exercise2.new(15)
 			aux2 = Exercise2.new(30)
 			aux3 = Exercise2.new(50)
-			aux.mul3 == true
-			aux.mul5 == true
-			aux2.mul3 == true
-			aux2.mul5 == false
-			aux3.mul3 == false
-			aux3.mul5 == true
+			aux.mul3.should be_true
+			aux.mul5.should be_true
+			aux2.mul3.should be_true
+			aux3.mul5.should be_true
 		end
 	end
 end
